@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+#container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    max-width: 350px;
+    width: 100%;
+}
+
+#display {
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    min-height: 60px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+#row:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    flex: 1;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+/* Number buttons */
+button[id="num"] {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+/* Zero button */
+#zeroBtn {
+    background-color: #e8e8e8;
+    color: #333;
+    flex: 2;
+}
+
+/* Operator buttons */
+button[id="operator"] {
+    background-color: #ff6b35;
+    color: white;
+    border-color: #e55a2b;
+}
+
+/* Special function buttons */
+#clearBtn, #delBtn, #percentBtn {
+    background-color: #4a90e2;
+    color: white;
+    border-color: #357abd;
+}
+
+/* Equals button */
+#equalBtn {
+    background-color: #28a745;
+    color: white;
+    border-color: #1e7e34;
+    flex: 2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    #container {
+        padding: 15px;
+        max-width: 300px;
+    }
+    
+    button {
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    #display {
+        min-height: 50px;
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Focus styles */
+button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Prevent text selection */
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
